@@ -12,6 +12,8 @@
  */
 
 #include "Matrix.h"
+#include <time.h>
+
 
 Matrix::Matrix(const int n) {
     size = n;
@@ -19,9 +21,17 @@ Matrix::Matrix(const int n) {
     for(int i = 0; i < n; ++i){
         matrix[i] = new bool[n];
     }
+    
+    srand(time(0));
+    for(size_t i = 0; i < n; ++i){
+        for(size_t j = 0; j < n; ++j){
+            matrix[i][j] = 1 + rand() % 1;
+        }
+    }
 }
 
 Matrix::Matrix(const Matrix& orig) {
+    this->size = orig.size;
 }
 
 Matrix::~Matrix() {
