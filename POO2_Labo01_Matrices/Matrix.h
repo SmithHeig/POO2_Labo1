@@ -16,13 +16,17 @@
 
 class Matrix {
 private:
-    
+    bool** matrix;
+    int size;
 public:
-    Matrix();
+    Matrix(const int n);
     Matrix(const Matrix& orig);
     virtual ~Matrix();
-private:
-
+    
+    Matrix doOr(const Matrix& m);
+    Matrix doXor(const Matrix& m);
+    Matrix doAnd(const Matrix& m);
+    
 };
 
 #endif /* MATRIX_H */

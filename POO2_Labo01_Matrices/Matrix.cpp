@@ -13,12 +13,27 @@
 
 #include "Matrix.h"
 
-Matrix::Matrix() {
+Matrix::Matrix(const int n) {
+    size = n;
+    bool** m = new bool[1][1];
+    matrix = m;
 }
 
 Matrix::Matrix(const Matrix& orig) {
 }
 
 Matrix::~Matrix() {
+    
 }
 
+Matrix Matrix::doOr(const Matrix& m){
+    
+}
+
+Matrix Matrix::doXor(const Matrix& m){
+    
+}
+
+Matrix Matrix::doAnd(const Matrix& m){
+    
+}
