@@ -15,15 +15,20 @@
 
 Matrix::Matrix(const int n) {
     size = n;
-    bool** m = new bool[1][1];
-    matrix = m;
+    matrix = new bool*[n];
+    for(int i = 0; i < n; ++i){
+        matrix[i] = new bool[n];
+    }
 }
 
 Matrix::Matrix(const Matrix& orig) {
 }
 
 Matrix::~Matrix() {
-    
+    for(int i = 0; i < size; ++i){
+        delete matrix[i];
+    }
+    delete matrix;
 }
 
 Matrix Matrix::doOr(const Matrix& m){
