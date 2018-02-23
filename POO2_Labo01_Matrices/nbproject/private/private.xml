@@ -7,6 +7,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/home/james/Documents/HEIG-VD/Cours/POO2/Labo/01-Matrices/POO2_Labo1/POO2_Labo01_Matrices/main.cpp</file>
             <file>file:/home/james/Documents/HEIG-VD/Cours/POO2/Labo/01-Matrices/POO2_Labo1/POO2_Labo01_Matrices/AndMatrix.h</file>
             <file>file:/home/james/Documents/HEIG-VD/Cours/POO2/Labo/01-Matrices/POO2_Labo1/POO2_Labo01_Matrices/OrMatrix.cpp</file>
@@ -18,6 +19,10 @@
             <file>file:/home/james/Documents/HEIG-VD/Cours/POO2/Labo/01-Matrices/POO2_Labo1/POO2_Labo01_Matrices/AndMatrix.cpp</file>
             <file>file:/home/james/Documents/HEIG-VD/Cours/POO2/Labo/01-Matrices/POO2_Labo1/POO2_Labo01_Matrices/Matrix.cpp</file>
             <file>file:/home/james/Documents/HEIG-VD/Cours/POO2/Labo/01-Matrices/POO2_Labo1/POO2_Labo01_Matrices/XorMatrix.h</file>
+=======
+            <file>file:/C:/Users/Jeremie/Documents/HEIG/POO2/Labos/Labo01/POO2_Labo1/POO2_Labo01_Matrices/main.cpp</file>
+            <file>file:/C:/Users/Jeremie/Documents/HEIG/POO2/Labos/Labo01/POO2_Labo1/POO2_Labo01_Matrices/Matrix.cpp</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>
