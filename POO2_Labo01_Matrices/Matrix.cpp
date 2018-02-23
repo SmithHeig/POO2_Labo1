@@ -14,11 +14,11 @@
 #include "Matrix.h"
 #include <time.h>
 
-
+//init matrix to add
 Matrix::Matrix(const int n) {
     size = n;
-    matrix = new bool*[n];
-    for(int i = 0; i < n; ++i){
+    matrix = new bool*[size];
+    for(int i = 0; i < size; ++i){
         matrix[i] = new bool[n];
     }
     
@@ -31,7 +31,12 @@ Matrix::Matrix(const int n) {
 }
 
 Matrix::Matrix(const Matrix& orig) {
-    this->size = orig.size;
+    initMatrix();
+    for(int i = 0; i < orig.size; ++i){
+        for(int j = 0; i < orig.size; ++j){
+            matrix[i][j] = orig.matrix[i][j];
+        }
+    }
 }
 
 Matrix::~Matrix() {
@@ -42,13 +47,50 @@ Matrix::~Matrix() {
 }
 
 Matrix Matrix::doOr(const Matrix& m){
-    
+    // test meme taille
+    if(size != m.size){
+        return nullptr;
+    }
+    Matrix result = new Matrix(size);
+    for(int i = 0; i < size; ++i){
+        for(int j = 0; j < size; ++j){
+            result[i][j] = this->matrix[i][j] || m.matrix[i][j];
+        }
+    }
 }
 
 Matrix Matrix::doXor(const Matrix& m){
-    
+     // test meme taille
+    if(size != m.size){
+        return nullptr;
+    }
+    Matrix result = new Matrix(size);
+    for(int i = 0; i < size; ++i){
+        for(int j = 0; j < size; ++j){
+            result[i][j] = !this->matrix[i][j] != !m.matrix[i][j];
+        }
+    }
 }
 
 Matrix Matrix::doAnd(const Matrix& m){
-    
+     // test meme taille
+    if(size != m.size){
+        return nullptr;
+    }
+    Matrix result = new Matrix(size);
+    for(int i = 0; i < size; ++i){
+        for(int j = 0; j < size; ++j){
+            result[i][j] = this->matrix[i][j] || m.matrix[i][j];
+        }
+    }
+}
+
+void Matrix::initMatrix(const int n){
+    if(matrix == nullptr){
+        size = n;
+        matrix = new bool*[size];
+        for(int i = 0; i < size; ++i){
+            matrix[i] = new bool[n];
+        }
+    }
 }

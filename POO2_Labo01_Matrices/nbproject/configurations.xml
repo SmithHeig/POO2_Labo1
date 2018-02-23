@@ -4,7 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>AndMatrix.h</itemPath>
       <itemPath>Matrix.h</itemPath>
+      <itemPath>Operator.h</itemPath>
+      <itemPath>OrMatrix.h</itemPath>
+      <itemPath>XorMatrix.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,7 +17,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>AndMatrix.cpp</itemPath>
       <itemPath>Matrix.cpp</itemPath>
+      <itemPath>Operator.cpp</itemPath>
+      <itemPath>OrMatrix.cpp</itemPath>
+      <itemPath>XorMatrix.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -41,9 +49,25 @@
           <standard>8</standard>
         </ccTool>
       </compileType>
+      <item path="AndMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AndMatrix.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Matrix.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Matrix.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Operator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Operator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OrMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OrMatrix.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="XorMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="XorMatrix.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -69,9 +93,25 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="AndMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AndMatrix.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Matrix.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Matrix.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Operator.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Operator.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="OrMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="OrMatrix.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="XorMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="XorMatrix.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

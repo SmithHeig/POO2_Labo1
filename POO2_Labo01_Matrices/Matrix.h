@@ -26,6 +26,8 @@ public:
     Matrix doOr(const Matrix& m);
     Matrix doXor(const Matrix& m);
     Matrix doAnd(const Matrix& m);
+private:
+    void initMatrix(const int n);
     
 };
 
