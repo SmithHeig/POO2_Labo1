@@ -25,13 +25,14 @@ Matrix::Matrix(const int n) {
     srand(time(0));
     for(size_t i = 0; i < n; ++i){
         for(size_t j = 0; j < n; ++j){
-            matrix[i][j] = 1 + rand() % 1;
+            matrix[i][j] = 1 + rand();
+            cout << 1 + rand();
         }
     }
 }
 
 Matrix::Matrix(const Matrix& orig) {
-    initMatrix();
+    initMatrix(orig.size);
     for(int i = 0; i < orig.size; ++i){
         for(int j = 0; i < orig.size; ++j){
             matrix[i][j] = orig.matrix[i][j];
@@ -94,3 +95,13 @@ void Matrix::initMatrix(const int n){
         }
     }
 }
+    
+ostream& operator <<(ostream& lhs, const Matrix& rhs){
+    for(size_t i = 0; i < rhs.size; ++i){
+        for(size_t j = 0; j < rhs.size; ++j){
+            lhs << rhs.matrix[i][j] << " ";
+        }
+        lhs << "\n";
+    }
+}
+    

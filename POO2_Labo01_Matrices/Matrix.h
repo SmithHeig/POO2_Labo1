@@ -14,7 +14,10 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-class Matrix {
+#include <iostream>  
+using namespace std;  
+
+class Matrix{
 private:
     bool** matrix;
     int size;
@@ -26,6 +29,9 @@ public:
     Matrix doOr(const Matrix& m);
     Matrix doXor(const Matrix& m);
     Matrix doAnd(const Matrix& m);
+    
+    friend ostream& operator <<(ostream& lhs, const Matrix& rhs);
+    
 private:
     void initMatrix(const int n);
     
