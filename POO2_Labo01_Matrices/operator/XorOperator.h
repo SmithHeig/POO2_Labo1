@@ -16,8 +16,19 @@
 
 #include "Operator.h"
 
+
+/**
+ * Classe permettant de d'obtenir le résultat d'une Xor entre 2 booleens
+ * 
+ */
 class XorOperator: public Operator{
 public:
+    /**
+     * 
+     * @param lhs
+     * @param rhs
+     * @return 
+     */
     bool execute(bool lhs, bool rhs) const;
 
 };
