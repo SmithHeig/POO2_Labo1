@@ -5,23 +5,15 @@
  */
 
 /* 
- * File:   XorMatrix.h
+ * File:   AndMatrix.cpp
  * Author: james
- *
+ * 
  * Created on 22 février 2018, 17:59
  */
 
-#ifndef XORMATRIX_H
-#define XORMATRIX_H
+#include "AndOperator.h"
 
-class XorMatrix {
-public:
-    XorMatrix();
-    XorMatrix(const XorMatrix& orig);
-    virtual ~XorMatrix();
-private:
-
-};
-
-#endif /* XORMATRIX_H */
+bool AndOperator::execute(bool lhs, bool rhs) const{
+    return lhs & rhs;
+}
 

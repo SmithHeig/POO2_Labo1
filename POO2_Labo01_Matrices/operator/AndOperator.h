@@ -14,13 +14,12 @@
 #ifndef ANDMATRIX_H
 #define ANDMATRIX_H
 
-class AndMatrix {
-public:
-    AndMatrix();
-    AndMatrix(const AndMatrix& orig);
-    virtual ~AndMatrix();
-private:
+#include "Operator.h"
 
+class AndOperator: public Operator{
+public:
+    bool execute(bool lhs, bool rhs) const;
+    
 };
 
 #endif /* ANDMATRIX_H */

@@ -5,20 +5,18 @@
  */
 
 /* 
- * File:   XorMatrix.cpp
+ * File:   OrMatrix.cpp
  * Author: james
  * 
  * Created on 22 février 2018, 17:59
  */
 
-#include "XorMatrix.h"
+#include "OrOperator.h"
 
-XorMatrix::XorMatrix() {
-}
 
-XorMatrix::XorMatrix(const XorMatrix& orig) {
-}
+using namespace std;
 
-XorMatrix::~XorMatrix() {
+bool OrOperator::execute(bool rhs, bool lhs) const{
+    return rhs || lhs;
 }
 

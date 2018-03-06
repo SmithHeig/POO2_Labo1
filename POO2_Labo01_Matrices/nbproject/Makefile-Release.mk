@@ -35,12 +35,14 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/AndMatrix.o \
 	${OBJECTDIR}/Matrix.o \
-	${OBJECTDIR}/Operator.o \
-	${OBJECTDIR}/OrMatrix.o \
-	${OBJECTDIR}/XorMatrix.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/operator/AndOperator.o \
+	${OBJECTDIR}/operator/Operator.o \
+	${OBJECTDIR}/operator/OrOperator.o \
+	${OBJECTDIR}/operator/RandomOperator.o \
+	${OBJECTDIR}/operator/XorOperator.o \
+	${OBJECTDIR}/utils.o
 
 
 # C Compiler Flags
@@ -67,35 +69,45 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/poo2_labo01_matrices.exe: ${OBJECTFIL
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/poo2_labo01_matrices ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/AndMatrix.o: AndMatrix.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AndMatrix.o AndMatrix.cpp
-
 ${OBJECTDIR}/Matrix.o: Matrix.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Matrix.o Matrix.cpp
 
-${OBJECTDIR}/Operator.o: Operator.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Operator.o Operator.cpp
-
-${OBJECTDIR}/OrMatrix.o: OrMatrix.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/OrMatrix.o OrMatrix.cpp
-
-${OBJECTDIR}/XorMatrix.o: XorMatrix.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/XorMatrix.o XorMatrix.cpp
-
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/operator/AndOperator.o: operator/AndOperator.cpp
+	${MKDIR} -p ${OBJECTDIR}/operator
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/AndOperator.o operator/AndOperator.cpp
+
+${OBJECTDIR}/operator/Operator.o: operator/Operator.cpp
+	${MKDIR} -p ${OBJECTDIR}/operator
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/Operator.o operator/Operator.cpp
+
+${OBJECTDIR}/operator/OrOperator.o: operator/OrOperator.cpp
+	${MKDIR} -p ${OBJECTDIR}/operator
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/OrOperator.o operator/OrOperator.cpp
+
+${OBJECTDIR}/operator/RandomOperator.o: operator/RandomOperator.cpp
+	${MKDIR} -p ${OBJECTDIR}/operator
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/RandomOperator.o operator/RandomOperator.cpp
+
+${OBJECTDIR}/operator/XorOperator.o: operator/XorOperator.cpp
+	${MKDIR} -p ${OBJECTDIR}/operator
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/XorOperator.o operator/XorOperator.cpp
+
+${OBJECTDIR}/utils.o: utils.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils.o utils.cpp
 
 # Subprojects
 .build-subprojects:

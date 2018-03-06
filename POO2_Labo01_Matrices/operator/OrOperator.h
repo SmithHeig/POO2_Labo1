@@ -5,20 +5,21 @@
  */
 
 /* 
- * File:   OrMatrix.cpp
+ * File:   OrMatrix.h
  * Author: james
- * 
+ *
  * Created on 22 février 2018, 17:59
  */
 
-#include "OrMatrix.h"
+#ifndef ORMATRIX_H
+#define ORMATRIX_H
 
-OrMatrix::OrMatrix() {
-}
+#include "Operator.h"
 
-OrMatrix::OrMatrix(const OrMatrix& orig) {
-}
+class OrOperator : public Operator{
+public:
+    bool execute(bool lhs, bool rhs) const;
+};
 
-OrMatrix::~OrMatrix() {
-}
+#endif /* ORMATRIX_H */
 

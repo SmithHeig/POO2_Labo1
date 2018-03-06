@@ -14,12 +14,10 @@
 #ifndef OPERATOR_H
 #define OPERATOR_H
 
-class Operator: public Matrix{
+class Operator{
+
 public:
-    Operator();
-    Operator(const Operator& orig, Matrix& m);
-    virtual ~Operator();
-    
+    virtual bool execute(bool lhs, bool rhs) const {};
 };
 
 #endif /* OPERATOR_H */
