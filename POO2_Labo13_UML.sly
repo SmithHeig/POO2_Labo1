@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="iso-8859-15" standalone="no"?>
+<classDiagram>
+  <diagramElements defaultViewEntities="ALL" defaultViewEnum="true" defaultViewMethods="TYPE_AND_NAME" defaultVisibleTypes="true" informations="" name="">
+    <association aggregation="NONE" direction="BIDIRECTIONAL" id="10646" name="Génère&gt;">
+      <role componentId="10601" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+      <role componentId="10554" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>0</min>
+          <max>0</max>
+        </multiplicity>
+      </role>
+    </association>
+    <entity entityType="CLASS" id="10601" isAbstract="false" name="Utils" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="attribute" type="void" visibility="PRIVATE"/>
+      <method isAbstract="false" isStatic="true" name="doRand" returnType="int" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="n" type="uint"/>
+      </method>
+    </entity>
+    <inheritance id="10600">
+      <child>10554</child>
+      <parent>10261</parent>
+    </inheritance>
+    <inheritance id="10599">
+      <child>10414</child>
+      <parent>10261</parent>
+    </inheritance>
+    <inheritance id="10598">
+      <child>10469</child>
+      <parent>10261</parent>
+    </inheritance>
+    <inheritance id="10597">
+      <child>10328</child>
+      <parent>10261</parent>
+    </inheritance>
+    <entity entityType="CLASS" id="10554" isAbstract="false" name="RandomOperator" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="execute" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="b1" type="bool"/>
+        <variable const="false" name="b2" type="bool"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="10469" isAbstract="false" name="XorOperator" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="execute" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="b1" type="bool"/>
+        <variable const="false" name="b2" type="bool"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="10414" isAbstract="false" name="AndOperator" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="execute" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="b1" type="bool"/>
+        <variable const="false" name="b2" type="bool"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="10328" isAbstract="false" name="OrOperator" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="execute" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="b1" type="bool"/>
+        <variable const="false" name="b2" type="bool"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="10261" isAbstract="true" name="Operator" visibility="PUBLIC">
+      <method isAbstract="true" isStatic="false" name="execute" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="b1" type="bool"/>
+        <variable const="false" name="b2" type="bool"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="10260" isAbstract="false" name="Matrix" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="matrix" type="bool**" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="false" name="size" type="size_t" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="true" name="OR_OP" type="OrOperator" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="true" name="AND_OP" type="AndOperator" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="true" name="XOR_OP" type="XorOperator" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="true" name="RANDOM_OP" type="RandomOperator" visibility="PRIVATE"/>
+      <method isAbstract="false" isStatic="false" name="binaryOperarations" returnType="void" view="DEFAULT" visibility="PRIVATE">
+        <variable const="false" name="m1" type="constMatrix&amp;"/>
+        <variable const="false" name="m2" type="constMatrix&amp;"/>
+        <variable const="false" name="o" type="constOperator&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="operatePtr" returnType="Matrix*" view="DEFAULT" visibility="PRIVATE">
+        <variable const="false" name="m1" type="constMatrix&amp;"/>
+        <variable const="false" name="m2" type="int"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="operateVal" returnType="Matrix" view="DEFAULT" visibility="PRIVATE">
+        <variable const="false" name="m1" type="constMatrix&amp;"/>
+        <variable const="false" name="m2" type="constMatrix&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="orReplace" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="orPtr" returnType="Matrix*" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="orVal" returnType="Matrix" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="andReplace" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="andPtr" returnType="Matrix*" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="andVal" returnType="Matrix" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="xorReplace" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="xorPtr" returnType="Matrix*" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="xorVal" returnType="Matrix" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="operator&lt;&lt;" returnType="friendOstream&amp;" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+  </diagramElements>
+  <umlView grid="10" name="Main view" open="true">
+    <relationView color="-12566464" relationId="10597">
+      <line>
+        <point>
+          <x>571</x>
+          <y>401</y>
+        </point>
+        <point>
+          <x>571</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>321</y>
+        </point>
+      </line>
+    </relationView>
+    <relationView color="-12566464" relationId="10598">
+      <line>
+        <point>
+          <x>811</x>
+          <y>401</y>
+        </point>
+        <point>
+          <x>811</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>321</y>
+        </point>
+      </line>
+    </relationView>
+    <relationView color="-12566464" relationId="10599">
+      <line>
+        <point>
+          <x>1051</x>
+          <y>401</y>
+        </point>
+        <point>
+          <x>1051</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>321</y>
+        </point>
+      </line>
+    </relationView>
+    <relationView color="-12566464" relationId="10600">
+      <line>
+        <point>
+          <x>1291</x>
+          <y>401</y>
+        </point>
+        <point>
+          <x>1291</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>931</x>
+          <y>321</y>
+        </point>
+      </line>
+    </relationView>
+    <relationView color="-12566464" relationId="10646">
+      <line>
+        <point>
+          <x>1531</x>
+          <y>421</y>
+        </point>
+        <point>
+          <x>1401</x>
+          <y>421</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>1445</x>
+        <y>428</y>
+        <w>54</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>1495</x>
+        <y>425</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>1405</x>
+        <y>425</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>1517</x>
+        <y>398</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>1405</x>
+        <y>398</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
+    <componentView color="-2079" componentID="10260" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>0</x>
+        <y>40</y>
+        <w>520</w>
+        <h>340</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="10261" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>810</x>
+        <y>250</y>
+        <w>230</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="10328" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>460</x>
+        <y>400</y>
+        <w>220</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="10414" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>930</x>
+        <y>400</y>
+        <w>240</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="10469" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>690</x>
+        <y>400</y>
+        <w>230</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="10554" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>1180</x>
+        <y>400</y>
+        <w>220</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="10601" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>1530</x>
+        <y>390</y>
+        <w>150</w>
+        <h>85</h>
+      </geometry>
+    </componentView>
+  </umlView>
+</classDiagram>

@@ -5,23 +5,22 @@
  */
 
 /* 
- * File:   OrMatrix.h
+ * File:   XorMatrix.h
  * Author: james
  *
  * Created on 22 février 2018, 17:59
  */
 
-#ifndef ORMATRIX_H
-#define ORMATRIX_H
+#ifndef XORMATRIX_H
+#define XORMATRIX_H
 
-class OrMatrix {
+#include "Operator.h"
+
+class XorOperator: public Operator{
 public:
-    OrMatrix();
-    OrMatrix(const OrMatrix& orig);
-    virtual ~OrMatrix();
-private:
+    bool execute(bool lhs, bool rhs) const;
 
 };
 
-#endif /* ORMATRIX_H */
+#endif /* XORMATRIX_H */
 

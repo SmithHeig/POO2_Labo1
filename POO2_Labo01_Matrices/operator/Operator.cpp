@@ -13,13 +13,5 @@
 
 #include "Operator.h"
 
-Operator::Operator() {
-    
-}
 
-Operator::Operator(const Operator& orig) {
-}
-
-Operator::~Operator() {
-}
 

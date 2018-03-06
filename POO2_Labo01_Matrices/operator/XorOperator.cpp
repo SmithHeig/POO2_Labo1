@@ -5,20 +5,13 @@
  */
 
 /* 
- * File:   AndMatrix.cpp
+ * File:   XorMatrix.cpp
  * Author: james
  * 
  * Created on 22 février 2018, 17:59
  */
 
-#include "AndMatrix.h"
-
-AndMatrix::AndMatrix() {
+#include "XorOperator.h"
+bool XorOperator::execute(bool lhs, bool rhs) const{
+    return lhs ^ rhs;
 }
-
-AndMatrix::AndMatrix(const AndMatrix& orig) {
-}
-
-AndMatrix::~AndMatrix() {
-}
-
