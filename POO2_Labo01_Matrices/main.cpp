@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   main.cpp
  * Author: Jeremie
@@ -12,43 +6,80 @@
  */
 
 #include <cstdlib>
+#include <ratio>
 
 using namespace std;
 #include "Matrix.h"
 #include "utils.h"
-/*
- * 
- */
-int main(int argc, char** argv) {
-    Matrix  m1 = Matrix(4);
-    Matrix  m2 = Matrix(4);
-    Matrix* m4;
 
-    m4 = new Matrix(3);
+int main(int argc, char** argv) {
+
     
     /* TEST RANDOM */
-    for(int i = 0; i < 20; ++i){
+    cout << "\n\nTEST RANDOM:\n";
+    for(int i = 0; i < 10; ++i){
         for(int j = 0; j < 20; ++j){
             cout << Utils::doRand(i) << " ";
         }
         cout << "\n";
     }
     
+    /* TEST MATRIX */
+    cout << "\n\nTEST MATRIX:\n";
+    Matrix  m1(4);
+    Matrix  m2(4);
+    Matrix* m4;
     cout << "M1: \n" << m1 << "\n";
     cout << "M2: \n" << m2 << "\n";
    
-    Matrix m3 = m1.orVal(m2);
+    
+    // Operation retour par valeur
+    cout << "\nOperation retour par valeur:\n";
+    Matrix m3 = m1.orVal(m2);    
+    cout << "M3 (m1.orVal(m2)): \n" << m3 << "\n";
+    Matrix m5 = m1.andVal(m2);    
+    cout << "M5 (m1.andVal(m2)): \n" << m5 << "\n";
+    Matrix m7 = m1.xorVal(m2);    
+    cout << "M7 (m1.xorVal(m2)): \n" << m7 << "\n";
     
     
-    cout << "M3 (m1.doOrVal(m2)): \n" << m3 << "\n";
-    
+    // Operation retour par pointeur
+    cout << "\nOperation retour par pointeur:\n";
     m4 = m1.orPtr(m2);
-    cout << "M4 (m1.doOrPtr(m2)): \n" << *m4 << "\n";
-   
-    m1.orReplace(m2);
+    cout << "M4 (m1.orPtr(m2)): \n" << *m4 << "\n";
+    m4 = m1.andPtr(m2);
+    cout << "M4 (m1.andPtr(m2)): \n" << *m4 << "\n";
+    m4 = m1.xorPtr(m2);
+    cout << "M4 (m1.xorPtr(m2)): \n" << *m4 << "\n";
     
-    cout << "M1 (m1.doOrReplace(m2)): \n" << m1 << "\n";
-    //Matrix m3;
+   
+    // Operation par remplacement
+    cout << "\nOperation par remplacement: \n";
+    m1.xorReplace(m2);
+    cout << "M1 (m1.xorReplace(m2)): \n" << m1 << "\n";
+    m1.orReplace(m2);
+    cout << "M1 (m1.orReplace(m2)): \n" << m1 << "\n";
+    m1.andReplace(m2);
+    cout << "M1 (m1.andReplace(m2)): \n" << m1 << "\n";
+    
+    
+    
+    // TEST ERREUR //
+    cout << "\n\nTEST ERREUR:\n";
+    Matrix m6 = Matrix(5);
+    try{
+        m1.orPtr(m6);
+    } catch (exception& e){
+        cout << "Error: " << e.what() << "\n";
+    }
+    
+    
+    try{
+        Matrix m8 = Matrix(-5);
+    } catch (exception& e){
+        cout << "Error: " << e.what() << "\n";
+    }
+    
     return 0;
 }
 

@@ -7,19 +7,30 @@
 
 #include "Matrix.h"
 
-
+// STATIC //
 const OrOperator Matrix::OR_OP = OrOperator();
 const XorOperator Matrix::XOR_OP = XorOperator();
-
 const AndOperator Matrix::AND_OP = AndOperator();
 const RandomOperator Matrix::RAND_OP = RandomOperator();
 
-Matrix::Matrix(size_t n, bool setValue): size(n){
-    matrix = new bool*[size];
-    for(int i = 0; i < size; ++i)
-        matrix[i] = new bool[n];
+Matrix::Matrix(size_t n, bool setValue){   
     
-
+    size = n;
+    matrix = new bool*[size];
+    
+    int i = 0;
+    try{
+        for(; i < size; ++i)
+            matrix[i] = new bool[n];
+    } catch(const exception& e){ // En cas d'erreur, delete la matrice partiellement initialisée
+        
+        for(int j = 0; j < i; ++j)
+            delete[] matrix[j];
+        delete[] matrix;
+        
+        throw e;
+    }
+    
    if(setValue)
        this->binaryOperarations(*this, *this, RAND_OP);
 }
@@ -33,7 +44,7 @@ Matrix::~Matrix() {
 
 void Matrix::binaryOperarations(const Matrix& m1, const Matrix& m2, const Operator& o){
     if(m1.size != m2.size || this->size != m1.size)
-        throw runtime_error("Size not equal");
+        throw invalid_argument("Matrix size not equal");
     
     for(int i = 0; i < this->size; ++i){
         for(int j = 0; j < this->size; ++j){
@@ -42,12 +53,11 @@ void Matrix::binaryOperarations(const Matrix& m1, const Matrix& m2, const Operat
     }
 }
 
-
 Matrix* Matrix::operatePtr(const Matrix& m, const Operator& o) const{
     Matrix* ret = new Matrix(m.size, 0);
-    try{
+    try{ 
         ret->binaryOperarations(*this, m, o);
-    } catch (exception e){
+    } catch (const invalid_argument& e){ // En cas d'erreur, delete la matrice
         delete ret;
         throw e;
     }
@@ -55,7 +65,7 @@ Matrix* Matrix::operatePtr(const Matrix& m, const Operator& o) const{
 }
 
 Matrix Matrix::operateVal(const Matrix& m, const Operator& o) const{
-    Matrix ret = Matrix(m.size, 0);
+    Matrix ret(m.size, 0);
     ret.binaryOperarations(*this, m, o);
     return ret;
 }
@@ -64,11 +74,9 @@ Matrix Matrix::operateVal(const Matrix& m, const Operator& o) const{
 Matrix* Matrix::orPtr(const Matrix& m) const{    
     return operatePtr(m, OR_OP);
 }
-
 Matrix Matrix::orVal(const Matrix& m) const{
     return operateVal(m, OR_OP);
 }
-
 void Matrix::orReplace(const Matrix& m){
     this->binaryOperarations(*this, m, OR_OP);
 }
