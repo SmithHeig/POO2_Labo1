@@ -1,17 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
- * File:   utils.cpp
- * Author: Jeremie
+ * File:   Utils.cpp
+ * Author: Jérémie Chatillon et James Smith
  * 
  * Created on 3. mars 2018, 23:27
  */
 
-#include "utils.h"
+#include "Utils.h"
 #include <iostream>
 
 // https://stackoverflow.com/questions/24005459/implementation-of-the-random-number-generator-in-c-c

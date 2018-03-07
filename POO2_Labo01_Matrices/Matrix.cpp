@@ -1,6 +1,6 @@
 /* 
  * File:   Matrix.cpp
- * Author: james
+ * Author: Jérémie Chatillon et James Smith
  * 
  * Created on 22 février 2018, 16:57
  */

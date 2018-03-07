@@ -1,16 +1,16 @@
 /* 
  * File:   main.cpp
- * Author: Jeremie
+ * Author: Jérémie Chatillon et James Smith
  *
  * Created on 22. février 2018, 16:48
  */
 
 #include <cstdlib>
 #include <ratio>
+#include "Matrix.h"
+#include "Utils.h"
 
 using namespace std;
-#include "Matrix.h"
-#include "utils.h"
 
 int main(int argc, char** argv) {
 

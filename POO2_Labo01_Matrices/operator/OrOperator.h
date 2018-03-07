@@ -1,6 +1,6 @@
 /* 
- * File:   OrMatrix.h
- * Author: james
+ * File:   OrOperator.h
+ * Author: Jérémie Chatillon et James Smith
  *
  * Created on 22 février 2018, 17:59
  */

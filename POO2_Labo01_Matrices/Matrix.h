@@ -1,6 +1,6 @@
 /* 
  * File:   Matrix.h
- * Author: james
+ * Author: Jérémie Chatillon et James Smith
  *
  * Created on 22 février 2018, 16:57
  */
@@ -9,9 +9,7 @@
 #define MATRIX_H
 
 #include <iostream>
-
-#include "utils.h"
-
+#include "Utils.h"
 #include "operator/AndOperator.h"
 #include "operator/OrOperator.h"
 #include "operator/XorOperator.h"

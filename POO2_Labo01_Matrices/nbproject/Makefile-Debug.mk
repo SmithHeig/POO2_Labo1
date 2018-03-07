@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=MinGW-Windows
-CND_DLIB_EXT=dll
+CND_PLATFORM=GNU-Linux
+CND_DLIB_EXT=so
 CND_CONF=Debug
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -36,13 +36,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Matrix.o \
+	${OBJECTDIR}/Utils.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/operator/AndOperator.o \
 	${OBJECTDIR}/operator/Operator.o \
 	${OBJECTDIR}/operator/OrOperator.o \
 	${OBJECTDIR}/operator/RandomOperator.o \
-	${OBJECTDIR}/operator/XorOperator.o \
-	${OBJECTDIR}/utils.o
+	${OBJECTDIR}/operator/XorOperator.o
 
 
 # C Compiler Flags
@@ -63,9 +63,9 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/poo2_labo01_matrices.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/poo2_labo01_matrices
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/poo2_labo01_matrices.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/poo2_labo01_matrices: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/poo2_labo01_matrices ${OBJECTFILES} ${LDLIBSOPTIONS}
 
@@ -73,6 +73,11 @@ ${OBJECTDIR}/Matrix.o: Matrix.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Matrix.o Matrix.cpp
+
+${OBJECTDIR}/Utils.o: Utils.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Utils.o Utils.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -103,11 +108,6 @@ ${OBJECTDIR}/operator/XorOperator.o: operator/XorOperator.cpp
 	${MKDIR} -p ${OBJECTDIR}/operator
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/XorOperator.o operator/XorOperator.cpp
-
-${OBJECTDIR}/utils.o: utils.cpp
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/utils.o utils.cpp
 
 # Subprojects
 .build-subprojects:

@@ -1,6 +1,6 @@
 /* 
- * File:   randomOperator.h
- * Author: Jeremie
+ * File:   RandomOperator.h
+ * Author: Jérémie Chatillon et James Smith
  *
  * Created on 6. mars 2018, 17:15
  */

@@ -1,6 +1,6 @@
 /* 
  * File:   Operator.h
- * Author: james
+ * Author: Jérémie Chatillon et James Smith
  *
  * Created on 22 février 2018, 17:55
  */

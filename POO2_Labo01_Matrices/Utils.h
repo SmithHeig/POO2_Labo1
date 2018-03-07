@@ -1,6 +1,6 @@
 /* 
- * File:   utils.h
- * Author: Jeremie
+ * File:   Utils.h
+ * Author: Jérémie Chatillon et James Smith
  *
  * Created on 3. mars 2018, 23:27
  */
