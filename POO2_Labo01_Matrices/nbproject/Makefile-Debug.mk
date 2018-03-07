@@ -39,7 +39,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/Utils.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/operator/AndOperator.o \
-	${OBJECTDIR}/operator/Operator.o \
 	${OBJECTDIR}/operator/OrOperator.o \
 	${OBJECTDIR}/operator/RandomOperator.o \
 	${OBJECTDIR}/operator/XorOperator.o
@@ -88,11 +87,6 @@ ${OBJECTDIR}/operator/AndOperator.o: operator/AndOperator.cpp
 	${MKDIR} -p ${OBJECTDIR}/operator
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/AndOperator.o operator/AndOperator.cpp
-
-${OBJECTDIR}/operator/Operator.o: operator/Operator.cpp
-	${MKDIR} -p ${OBJECTDIR}/operator
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/operator/Operator.o operator/Operator.cpp
 
 ${OBJECTDIR}/operator/OrOperator.o: operator/OrOperator.cpp
 	${MKDIR} -p ${OBJECTDIR}/operator

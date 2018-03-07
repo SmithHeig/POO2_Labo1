@@ -107,12 +107,7 @@ void Matrix::andReplace(const Matrix& m){
     this->binaryOperarations(*this, m, AND_OP);
 }
 
-
-
-    
-    
-
-ostream& operator <<(ostream& lhs, const Matrix& rhs){
+ostream& operator << (ostream& lhs, const Matrix& rhs){
     for(size_t i = 0; i < rhs.size; ++i){
         for(size_t j = 0; j < rhs.size; ++j)
             lhs << rhs.matrix[i][j] << " ";

@@ -21,7 +21,6 @@
                    projectFiles="true">
       <itemPath>operator/AndOperator.cpp</itemPath>
       <itemPath>Matrix.cpp</itemPath>
-      <itemPath>operator/Operator.cpp</itemPath>
       <itemPath>operator/OrOperator.cpp</itemPath>
       <itemPath>operator/RandomOperator.cpp</itemPath>
       <itemPath>Utils.cpp</itemPath>
@@ -66,8 +65,6 @@
       <item path="operator/AndOperator.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="operator/AndOperator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="operator/Operator.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="operator/Operator.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -118,8 +115,6 @@
       <item path="operator/AndOperator.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="operator/AndOperator.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="operator/Operator.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="operator/Operator.h" ex="false" tool="3" flavor2="0">
       </item>
