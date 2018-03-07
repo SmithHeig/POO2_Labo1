@@ -5,7 +5,7 @@
  */
 
 /* 
- * File:   OrMatrix.h
+ * File:   XorMatrix.h
  * Author: james
  *
  * Created on 22 février 2018, 17:59
@@ -18,15 +18,15 @@
 
 /**
  *  Classe enfant de oerator permettant de surcharger la méthode execute pour effectuer un opération
- *   booleean OR entre 2 booleean.
+ *   booleean XOR entre 2 booleean.
  */
-class OrOperator : public Operator{
+class XorOperator : public Operator{
 public:
     /**
      * Résout l'opération booleean OR entre 2 booleean
      * @param lhs   Opérande gauche
      * @param rhs   Opérande droite
-     * @return lhs OR rhs
+     * @return lhs XOR rhs
     */
     bool execute(bool lhs, bool rhs) const;
 };

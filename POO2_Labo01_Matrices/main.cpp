@@ -24,6 +24,8 @@ int main(int argc, char** argv) {
     Matrix  m2 = Matrix(4);
     Matrix* m4;
 
+    m4 = new Matrix(3);
+    
     /* TEST RANDOM */
     for(int i = 0; i < 20; ++i){
         for(int j = 0; j < 20; ++j){

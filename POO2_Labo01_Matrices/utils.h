@@ -14,7 +14,7 @@
  * Classe utilitaire mettant à dispostion diverses fonctions:
  *      Méthode1: Random
  *      Méthode2: Comming one day...
- */
+ */  
 class Utils {
 public:
     /**

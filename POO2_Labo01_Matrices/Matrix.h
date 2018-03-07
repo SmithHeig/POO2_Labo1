@@ -25,18 +25,28 @@
 #include "operator/Operator.h"
 #include "operator/RandomOperator.h"
 
+
 using namespace std;  
 
+/**
+ * Classe permettant de générer des matrices carée de booleean d'un taille n.
+ * Cette classe permet aussi d'éfectuer des operations binnaires sur ces matrices.
+ *  
+ */
 class Matrix{
-private:
-    bool** matrix;
-    size_t size;
     
+    //* VARIABLES *//
+private:
+    bool** matrix;                          // Matrice carée
+    size_t size;                            // Taille de la matrice
+    
+    // OPERATEUES
     static const OrOperator OR_OP;
     static const XorOperator XOR_OP;
     static const AndOperator AND_OP;
     static const RandomOperator RAND_OP;
-    
+
+    //* Constructeurs *//
 public:
     Matrix();
     Matrix(size_t n, bool setValue = true);

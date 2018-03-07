@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   Operator.h
  * Author: james
@@ -14,9 +8,18 @@
 #ifndef OPERATOR_H
 #define OPERATOR_H
 
-class Operator{
 
+/**
+ * Classe mettant à disposition une méthode abstraite (virtual) qui retroune un résultat booléean.
+ */
+class Operator{
 public:
+    /**
+     * Méthode abstraite (virtual) permettant d'excuter une opération et d'obtenir un résultat boolean
+     * @param lhs   Opérande gauche
+     * @param rhs   Opérande droite
+     * @return résutltat d'une opération.
+    */
     virtual bool execute(bool lhs, bool rhs) const {};
 };
 
