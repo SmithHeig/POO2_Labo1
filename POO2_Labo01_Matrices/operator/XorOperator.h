@@ -11,8 +11,8 @@
  * Created on 22 février 2018, 17:59
  */
 
-#ifndef ORMATRIX_H
-#define ORMATRIX_H
+#ifndef XORMATRIX_H
+#define XORMATRIX_H
 
 #include "Operator.h"
 
@@ -31,5 +31,5 @@ public:
     bool execute(bool lhs, bool rhs) const;
 };
 
-#endif /* ORMATRIX_H */
+#endif /* XORMATRIX_H */
 

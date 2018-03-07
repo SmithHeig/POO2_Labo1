@@ -7,8 +7,10 @@
 
 #include "Matrix.h"
 
+
 const OrOperator Matrix::OR_OP = OrOperator();
 const XorOperator Matrix::XOR_OP = XorOperator();
+
 const AndOperator Matrix::AND_OP = AndOperator();
 const RandomOperator Matrix::RAND_OP = RandomOperator();
 
@@ -98,7 +100,7 @@ void Matrix::andReplace(const Matrix& m){
 }
 
 
-void Matrix::initMatrix(const int n){}
+
     
     
 
